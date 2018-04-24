@@ -1,6 +1,3 @@
-// (2*(2+3)-(3+1))
-//stack : (2*5-4)
-//(2*5-4/2) 10-2
 
 import java.util.*;
 public class Calculator {
