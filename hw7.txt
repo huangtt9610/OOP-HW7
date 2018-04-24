@@ -1,0 +1,20 @@
+Q1.
+	There is no specific explanation to this particular question online. By collecting the information 
+from web, my guess is that when you throw an exception, the throwable in the catch block knows what type of 
+exception it is handling. Therefore, we don't need to handle the new throwable throwed in the catch block 
+because the compiler knows it will only be handling the unchecked exception. The websitebelow prove my point 
+that JVM knows what exception is catched by Throwable.
+
+https://stackoverflow.com/questions/31585265/catching-throwable-and-handling-specific-exceptions
+
+
+Q2.
+https://medium.com/@LazaroIbanez/notes-about-java-8-difference-between-super-and-super-58740094be90
+
+	super.method and interface.super.method have similar syntax. There is only one superclass you can extend 
+for each subclass. So using super.method, the JVM knows you are calling the method of superclass. However, for the 
+interface, you can implements as many as you want. To clarify which default method of the interfaces you are using, 
+you need to put the interfacename before calling the super method.
+
+
+

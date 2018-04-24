@@ -1,0 +1,78 @@
+Question 1
+
+Write a command line calculator. Implement all the basic functions 
+(addition, subtraction...) as well as the correct behavior for 
+parenthesis. Make sure your calculator works with both integers and 
+doubles. Here's an example run:
+
+javac Calculator 2 + 3
+5
+
+Separate all the arguments with a space to make your life easy.
+
+If the user enters anything other than a number where a number belongs, 
+throw a AlgebraFailException derived from the IlleglArgumentException. If 
+the user enters an operation which isn't supported, throw a 
+QuitMashingOnYourKeyboardException derived from the 
+IllegalArgumentException. If the user forgets to enter a number, throw a 
+UserIsADumbassException also derived from IllegalArgumentException. Make 
+sure you deal with these exceptions gracefully. Don't pass them on to the 
+JVM. The user should never know what we think of them.
+
+You should also catch and deal with ArithmeticException in case the 
+user tries to divide by zero.
+
+Make sure your calculator correctly deals with the order of operations. 
+(Remember PEMDAS?). If you research how to turn the command line arguments 
+into postfix notation, it'll help. You will probably run into another 
+interesting problem, too. *maniacal laughter*
+
+
+Research Questions:
+1) In our class we saw that the java compiler seems to consider the actual 
+type of an exception instead of just the declared type. Here's the code:
+
+class blah{
+	public void someMethod(){
+		try{
+			throw new NullPointerException();
+		}
+		catch(Throwable t){
+			System.out.println("Caught!");
+			throw t;
+		}
+	}
+}
+
+You'd think that this class wouldn't compile, because t is declared to be 
+Throwable and that's a checked exception, but the code compiles just fine 
+because the actual type of t is an unchecked exception. On the other hand, 
+if you were to throw a checked exception in the try block, the code will 
+fail to compile because 't' is now a checked exception that you failed to 
+declare in your method. Find out why this happens. Make sure that you 
+provide sources.
+
+Question 2:
+Research why you're able to call the default implementation of a method in 
+an interface with some weird syntax. Here's the code:
+
+public class blah{
+	public static void main(String[] args){
+		A a = new A();
+		a.someMethod();
+	}
+}
+
+interface myinterface{
+	default public void sayHello(){
+		System.out.println("Hello");
+	}
+}
+
+class A implements myinterface{
+	public void someMethod(){
+		myinterface.super.sayHello();
+	}
+}
+
+Again, your answer must provide sources.

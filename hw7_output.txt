@@ -1,0 +1,20 @@
+C:\Users\huangtt\eclipse-workspace\HW7\src>java Calculator ( ( 5 + 2 ) x ( 8 / 2 ) - ( 6 x 5 / 3 ) + 8 ) - 9 / 2
+21.5
+
+C:\Users\huangtt\eclipse-workspace\HW7\src>java Calculator 5 + 2 x 3 / 6 - 8 x 6 / 4
+-6
+
+C:\Users\huangtt\eclipse-workspace\HW7\src>java Calculator 5 - 9 /
+Missing number
+
+C:\Users\huangtt\eclipse-workspace\HW7\src>java Calculator ( 5 )
+5
+
+C:\Users\huangtt\eclipse-workspace\HW7\src>java Calculator ( 5 + 8
+Incorrect operation
+
+C:\Users\huangtt\eclipse-workspace\HW7\src>java Calculator 6 / 0
+error, dividing by 0
+
+C:\Users\huangtt\eclipse-workspace\HW7\src>java Calculator 6 - + 8
+Insufficient number
